@@ -1,0 +1,24 @@
+<div>Request-AzureResourceRoleCollectionElevation -SubscriptionIds 
+<input id="input1" value=""/>
+-Duration 4 -Roles "Azure Kubernetes Service RBAC Cluster Admin" -Reason "AKS validation"</div>
+
+<select id="select", multiple="multiple">
+    <option>"1xxxxxxx-xxxx-xxx-xxxx-xxxxxxxx6xx6b"</option>
+    <option>"7xxxxxxx-xxxx-xxx-xxxx-xxxxxxxx5xx6e"</option>
+    <option>"2xxxxxxx-xxxx-xxx-xxxx-xxxxxxxx4xxdf"</option>
+    </select>
+<script>
+window.onload=function(){
+select.onchange=function(){
+    var l = []
+    for(var i=0;i<select.options.length;i++)
+    {
+        if(select.options[i].selected)
+        {
+        l.push(select.options[i].value)}
+        str = l.join( ", " )
+    }
+    input1.value = str     
+}
+}
+</script>
